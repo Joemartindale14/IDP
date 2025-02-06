@@ -5,7 +5,7 @@
   align-items: center;
 }
 .navbar .logo{
-  width: 150px;
+  width: 200px;
 }
 .navbar-menu{
   display: flex;
@@ -23,14 +23,14 @@
   background: transparent;
   font-size: 16px;
   color: #49557e;
-  border: 1px solid tomato;
+  border: 1px solid #2c7c56;
   padding: 10px 30px;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
 .navbar button:hover{
-  background-color: #fff4f2;
+  background-color: #c7f5df;
 }
 .navbar .active{
   padding-bottom: 2px;
@@ -46,7 +46,7 @@
   position: absolute;
   min-width: 10px;
   min-height: 10px;
-  background-color: tomato;
+  background-color: #2c7c56;
   border-radius: 5px;
   right: -8px;
   top: -8px;

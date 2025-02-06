@@ -1,0 +1,30 @@
+.about-us{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-us-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-us h1{
+  color: #262626;
+  font-weight: 500;
+}
+.about-us-text{
+  color: #808080; 
+  margin-bottom: 30px;
+}
+.about-us hr{
+  margin: 10px, 0px;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+@media (max-width: 1050px){
+  .about-us-text {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
