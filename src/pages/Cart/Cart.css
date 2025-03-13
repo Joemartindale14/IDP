@@ -1,5 +1,11 @@
 .cart{
-  margin-top: 100px;
+  margin-top: 50px;
+}
+.cart h1{
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 80px;
 }
 .cart-items-title{
   display: grid;

@@ -6,6 +6,8 @@ import Cart from "./pages/Cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
+import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
+import ExploreMenuPage from "./pages/ExploreMenuPage/ExploreMenuPage";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -17,6 +19,8 @@ const App = () => {
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/explore-menu" element={<ExploreMenuPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
         </Routes>

@@ -5,10 +5,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-contents">
-        <h2>Order your food here</h2>
+        <h2>View and order products</h2>
         <p>
-          Choose from the menu available which features an array of choices for
-          you.
+          Find Local Food Businessses located near you.
         </p>
         <button>View Menu</button>
       </div>

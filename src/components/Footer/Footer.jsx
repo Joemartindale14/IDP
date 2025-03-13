@@ -9,9 +9,8 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.local_foods_logo} alt="" />
           <p>
-            Hello this is a test text for the website I have created adn this
-            section is the footer of the website. This was at 1:53 of the
-            tutorial video.
+            Local Food Businesses.
+            Explore the range of businesses in your area, provding products for you to view and buy.
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />

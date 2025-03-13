@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import "./Home.css";
+import React from "react";
 import Header from "../../components/Header/Header";
-import AboutUs from "../../components/AboutUs/AboutUs";
-import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
-import FoodDisplay from "../../components/FoodDisplay/FoodDisplay";
+import OrderSteps from "../../components/OrderSteps/OrderSteps";
+import "./Home.css";
 
 const Home = () => {
-  const [category, setCategory] = useState("All");
-
   return (
-    <div>
+    <div className="home">
       <Header />
-      <AboutUs />
-      <ExploreMenu category={category} setCategory={setCategory} />
-      <FoodDisplay category={category} />
+      <hr />
+      <OrderSteps />
+      <hr />
     </div>
   );
 };

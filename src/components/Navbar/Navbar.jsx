@@ -22,20 +22,20 @@ const Navbar = ({ setShowLogin }) => {
         >
           HOME
         </Link>
-        <a
-          href="#about-us"
+        <Link
+          to="/about-us"
           onClick={() => setMenu("about us")}
           className={menu === "about us" ? "active" : ""}
         >
           ABOUT US
-        </a>
-        <a
-          href="#explore-menu"
+        </Link>
+        <Link
+          to="/explore-menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
           EXPLORE MENU'S
-        </a>
+        </Link>
         <a
           href="#footer"
           onClick={() => setMenu("contact us")}
