@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../axiosConfig";
+import { useNavigate } from "react-router-dom";
 import "./AccountPage.css";
 
-const AccountPage = ({ user }) => {
+const AccountPage = ({ user, setUser }) => {
   const [userData, setUserData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -20,6 +22,11 @@ const AccountPage = ({ user }) => {
     }
   }, [user]);
 
+  const handleLogout = () => {
+    setUser(null);
+    navigate("/");
+  };
+
   if (!userData) {
     return <div>Loading...</div>;
   }
@@ -28,6 +35,7 @@ const AccountPage = ({ user }) => {
     <div className="account-page">
       <h1>Welcome, {userData.name}</h1>
       <p>Email: {userData.email}</p>
+      <button onClick={handleLogout}>Logout</button>
       <h2>Your Orders</h2>
       {userData.orders.length > 0 ? (
         <ul>

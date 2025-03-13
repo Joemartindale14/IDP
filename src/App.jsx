@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/explore-menu" element={<ExploreMenuPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
-          <Route path="/account" element={<AccountPage user={user} />} /> {/* Pass user prop */}
+          <Route path="/account" element={<AccountPage user={user} setUser={setUser} />} /> {/* Pass setUser prop */}
         </Routes>
       </div>
       <Footer />
