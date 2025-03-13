@@ -10,7 +10,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h1>CART</h1>
+      <h1>Products in Your Cart</h1>
       <div className="cart-items">
         <div className="cart-items-title">
           <p>Items</p>

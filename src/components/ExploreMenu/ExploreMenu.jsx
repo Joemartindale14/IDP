@@ -9,8 +9,13 @@ const ExploreMenu = ({ category, setCategory }) => {
       <p className="explore-menu-text">
         Choose from our diverse menu to help you find what you are looking for.
         We have a huge range of products on this menu so hopefully you can find
+        the right one for you!Choose from our diverse menu to help you find what you are looking for.
+        We have a huge range of products on this menu so hopefully you can find
+        the right one for you!Choose from our diverse menu to help you find what you are looking for.
+        We have a huge range of products on this menu so hopefully you can find
         the right one for you!
       </p>
+      <hr />
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
           return (

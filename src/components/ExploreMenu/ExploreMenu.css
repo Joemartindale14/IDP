@@ -9,8 +9,8 @@
   margin-top: 30px;
 }
 .explore-menu-text{
-  max-width: 60%;
   color: #808080; 
+  margin: 20px 0px;
 }
 .explore-menu-list{
   display: flex;

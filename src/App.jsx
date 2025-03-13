@@ -8,21 +8,24 @@ import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ExploreMenuPage from "./pages/ExploreMenuPage/ExploreMenuPage";
+import AccountPage from "./pages/AccountPage/AccountPage";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
+  const [user, setUser] = useState(null);
 
   return (
     <>
-      {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></>}
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} setUser={setUser} /> : <></>}
       <div className="app">
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar setShowLogin={setShowLogin} user={user} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/explore-menu" element={<ExploreMenuPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
+          <Route path="/account" element={<AccountPage user={user} />} /> {/* Pass user prop */}
         </Routes>
       </div>
       <Footer />

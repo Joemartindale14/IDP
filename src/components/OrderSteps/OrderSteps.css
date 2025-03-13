@@ -1,8 +1,8 @@
 .order-steps{
   width: 80%;
-  height: 20vw;
+  height: 22vw;
   margin: 80px auto;
-  background-color: rgba(111, 111, 111, 0.555);
+  background-color: #2c7c56;
   background-size: contain;
   position: relative;
   border-radius: 20px;
@@ -27,7 +27,7 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
-  gap: 7vw;
+  gap: 5vw;
 }
 .order-step {
   display: flex;
@@ -36,12 +36,19 @@
   text-align: center;
 }
 .order-step img {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   margin-top: 50px;
+  border-radius: 20%;
+  padding: 10px;
+  background-color: whitesmoke;
+  transition: transform 0.3s ease;
+}
+.order-step img:hover {
+  transform: scale(1.2); /* Increase the scale on hover */
 }
 .order-step p {
-  margin-top: 10px;
+  margin-top: 25px;
   color: white;
   font-size: 1rem;
 }

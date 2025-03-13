@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import axios from "../../axiosConfig"; // Update the import statement
+import axios from "../../axiosConfig";
 import "./LoginPopup.css";
 import { assets } from "../../assets/assets";
+import { useNavigate } from "react-router-dom";
 
-const LoginPopup = ({ setShowLogin }) => {
+const LoginPopup = ({ setShowLogin, setUser }) => { // Add setUser prop
   const [currState, setCurrState] = useState("Login");
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
   const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // Add this line
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,13 +22,17 @@ const LoginPopup = ({ setShowLogin }) => {
       const { data } = await axios.post(url, formData);
       console.log(data);
       setSuccessMessage(currState === "Login" ? "Logged in successfully!" : "Registered successfully!");
-      setErrorMessage(""); // Clear any previous error messages
+      setErrorMessage("");
+      setUser(data.result); // Store user information in state
       setTimeout(() => {
         setShowLogin(false);
-      }, 2000); // Close the popup after 2 seconds
+        if (currState === "Login") {
+          navigate("/account");
+        }
+      }, 2000);
     } catch (error) {
       console.error(error);
-      setErrorMessage(error.response?.data?.message || "Something went wrong"); // Display error message
+      setErrorMessage(error.response?.data?.message || "Something went wrong");
     }
   };
 
@@ -91,7 +97,7 @@ const LoginPopup = ({ setShowLogin }) => {
           </p>
         )}
         {successMessage && <p className="success-message">{successMessage}</p>}
-        {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Add this line */}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
     </div>
   );

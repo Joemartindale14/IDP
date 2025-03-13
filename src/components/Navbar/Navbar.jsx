@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin, user }) => { // Add user prop
   const [menu, setMenu] = useState("home");
-
   const { getTotalCartAmount } = useContext(StoreContext);
+  const navigate = useNavigate();
 
   return (
     <div className="navbar">
@@ -52,7 +52,11 @@ const Navbar = ({ setShowLogin }) => {
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
-        <button onClick={() => setShowLogin(true)}>SIGN IN</button>
+        {user ? (
+          <button onClick={() => navigate("/account")}>{user.name}</button>
+        ) : (
+          <button onClick={() => setShowLogin(true)}>SIGN IN</button>
+        )}
       </div>
     </div>
   );
