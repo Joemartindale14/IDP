@@ -3,11 +3,6 @@
   flex-direction: column;
   gap: 20px;
 }
-.about-us-menu{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 .about-us h1{
   color: #262626;
   font-weight: 500;
