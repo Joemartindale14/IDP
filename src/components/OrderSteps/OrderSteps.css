@@ -2,7 +2,7 @@
   width: 80%;
   height: 22vw;
   margin: 80px auto;
-  background-color: #2c7c57da;
+  background-color: whitesmoke;
   background-size: contain;
   position: relative;
   border-radius: 20px;
@@ -18,7 +18,7 @@
 }
 .order-steps-contents h2{
   font-weight: 500;
-  color: white;
+  color: black;
   font-size: 3rem;
 }
 .order-steps-contents-text{
@@ -38,9 +38,7 @@
   width: 125px;
   height: 125px;
   margin-top: 50px;
-  border-radius: 20%;
   padding: 10px;
-  background-color: whitesmoke;
   transition: transform 0.3s ease;
 }
 .order-step img:hover {
@@ -48,7 +46,7 @@
 }
 .order-step p {
   margin-top: 25px;
-  color: white;
+  color: black;
   font-size: 1rem;
 }
 

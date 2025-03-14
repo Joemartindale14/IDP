@@ -1,15 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="header">
       <div className="header-contents">
-        <h2>View and order products</h2>
+        <h2>Local Food Businesses!</h2>
         <p>
-          Find Local Food Businessses located near you.
+          Find Local Food Businessses located near you to order products and foods for collection.
         </p>
-        <button>View Menu</button>
+        <button onClick={() => navigate("/businesses")}>Click here</button>
       </div>
     </div>
   );

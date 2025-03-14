@@ -30,11 +30,11 @@ const Navbar = ({ setShowLogin, user }) => { // Add user prop
           ABOUT US
         </Link>
         <Link
-          to="/explore-menu"
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? "active" : ""}
+          to="/businesses"
+          onClick={() => setMenu("businesses")}
+          className={menu === "businesses" ? "active" : ""}
         >
-          EXPLORE MENU'S
+          LOCAL BUSINESSES
         </Link>
         <a
           href="#footer"
@@ -45,7 +45,6 @@ const Navbar = ({ setShowLogin, user }) => { // Add user prop
         </a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
         <div className="navbar-search-icon">
           <Link to="/cart">
             <img src={assets.basket_icon} alt="" />

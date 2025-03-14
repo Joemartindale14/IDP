@@ -1,56 +1,69 @@
-.header{
+.header {
   height: 34vw;
-  margin: 30px auto;
-  background: url("src/assets/header_image.png") no-repeat;
-  background-size: contain;
+  width: 100%;
+  margin: 30px 0px 80px 0px;
+  background: url("src/assets/brooke-lark-wMzx2nBdeng-unsplash.jpg") no-repeat;
+  background-size: cover;
   position: relative;
   border-radius: 50px;
 }
-.header-contents{
+
+.header-contents {
+  width: 80%;
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
   gap: 1.5vw;
-  max-width: 100%;
-  bottom: 10%;
-  left: 5%;
   animation: fadeIn 3s;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 30px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.header-contents h2{
+
+.header-contents h2 {
   font-weight: 500;
-  color: white;
+  color: black;
   font-size: max(4.5vw, 22px);
 }
-.header-contents p{
-  color: white;
+
+.header-contents p {
+  color: black;
   font-size: 1vw;
 }
-.header-contents button{
+
+.header-contents button {
   border: none;
-  color: #747474;
+  color: white;
   font-weight: 500;
   padding: 1vw 2.3vw;
-  background-color: white;
-  font-size: max(1vw,13px);
+  background-color: #2c7c57da;
+  font-size: max(1vw, 13px);
   border-radius: 50px;
+  cursor: pointer;
 }
-@media (max-width: 1050px){
-  .header-contents{
+
+.header-contents button:hover {
+  background-color: #164e34da;
+}
+
+@media (max-width: 1050px) {
+  .header-contents {
     max-width: 45%;
   }
 }
-@media (max-width: 750px){
-  .header-contents{
+
+@media (max-width: 750px) {
+  .header-contents {
     max-width: 65%;
   }
-  .header-contents p{
+  .header-contents p {
     display: none;
   }
-  .header-contents button{
+  .header-contents button {
     padding: 2vw 4vw;
   }
 }
