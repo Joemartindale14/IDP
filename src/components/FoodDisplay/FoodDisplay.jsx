@@ -3,7 +3,7 @@ import "./FoodDisplay.css";
 import { StoreContext } from "../../context/StoreContext";
 import FoodItem from "../FoodItem/FoodItem";
 
-const FoodDisplay = ({ category }) => {
+const FoodDisplay = ({ category, products }) => {
   const { food_list } = useContext(StoreContext);
 
   return (
@@ -11,7 +11,7 @@ const FoodDisplay = ({ category }) => {
       <h2>DISHES NEAR YOU</h2>
       <div className="food-display-list">
         {food_list.map((item, index) => {
-          if (category === "All" || category === item.category) {
+          if ((category === "All" || category === item.category) && products.includes(item._id)) {
             return (
               <FoodItem
                 key={index}

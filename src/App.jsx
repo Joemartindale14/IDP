@@ -9,7 +9,8 @@ import LoginPopup from "./components/LoginPopup/LoginPopup";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ExploreMenuPage from "./pages/ExploreMenuPage/ExploreMenuPage";
 import AccountPage from "./pages/AccountPage/AccountPage";
-import BusinessPage from "./pages/BusinessPage/BusinessPage"; // Import BusinessPage
+import BusinessPage from "./pages/BusinessPage/BusinessPage";
+import BusinessDetailPage from "./pages/BusinessDetailPage/BusinessDetailPage"; // Import BusinessDetailPage
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -24,11 +25,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/explore-menu" element={<ExploreMenuPage />} />
-          <Route path="/explore-menu/:businessId" element={<ExploreMenuPage />} /> {/* Add route with businessId */}
+          <Route path="/explore-menu/:businessId" element={<ExploreMenuPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/account" element={<AccountPage user={user} setUser={setUser} />} />
-          <Route path="/businesses" element={<BusinessPage />} /> {/* Add route for BusinessPage */}
+          <Route path="/businesses" element={<BusinessPage />} />
+          <Route path="/business/:businessId" element={<BusinessDetailPage />} /> {/* Add route for BusinessDetailPage */}
         </Routes>
       </div>
       <Footer />

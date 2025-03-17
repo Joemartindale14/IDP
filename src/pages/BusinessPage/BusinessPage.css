@@ -7,24 +7,24 @@
     color: #262626;
     font-weight: 500;
     margin-top: 30px;
-  }
-  .business-page hr{
+}
+.business-page hr{
     margin: 10px, 0px;
     height: 2px;
-    background-color: #e2e2e2;
+    background-color: #c0c0c0;
     border: none;
-  }
+}
 .business-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px 0px;
+    gap: 40px;
+    margin: 50px 0px;
     justify-content: center;
 }
 .business-item {
     cursor: pointer;
-    height: 200px;
-    width: 200px;
+    height: 420px;
+    width: 400px;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
@@ -32,13 +32,20 @@
 }
 .business-item img {
     width: 100%;
-    height: 150px;
+    height: 320px;
     object-fit: cover;
 }
-.business-item p {
+.business-item h2 {
+    font-size: 1.5rem;
     padding: 10px;
     background-color: #f8f8f8;
 }
+.business-item p {
+    font-size: 1.1rem;
+    padding: 10px;
+    color:rgb(147, 147, 147);
+    background-color: #f8f8f8;
+}
 .business-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }

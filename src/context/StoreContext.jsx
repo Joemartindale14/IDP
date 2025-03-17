@@ -1,10 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../assets/assets";
+import { food_list as initialFoodList } from "../assets/assets";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
+  const [food_list, setFoodList] = useState(initialFoodList.map(food => ({ ...food, _id: food._id.toString() })));
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
