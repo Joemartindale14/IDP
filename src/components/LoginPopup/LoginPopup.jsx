@@ -32,7 +32,7 @@ const LoginPopup = ({ setShowLogin, setUser }) => {
       }, 2000);
     } catch (error) {
       console.error(error);
-      setErrorMessage(error.response?.data?.message || "Something went wrong");
+      setErrorMessage(error.response?.data?.message || "You have ran into an error.");
     }
   };
 
@@ -81,18 +81,18 @@ const LoginPopup = ({ setShowLogin, setUser }) => {
         <div className="login-popup-condition">
           <input type="checkbox" required />
           <p>
-            By ticking this box, I agree to the terms of use and company privacy
+            By ticking this box, I agree to the terms of use and Local Foods privacy
             policy.
           </p>
         </div>
         {currState === "Login" ? (
           <p>
-            Create an account?{" "}
+            Not an existing user?{" "}
             <span onClick={() => setCurrState("Sign Up")}>Click Here</span>
           </p>
         ) : (
           <p>
-            Already have an account?{" "}
+            You are already a user?{" "}
             <span onClick={() => setCurrState("Login")}>Login Here</span>
           </p>
         )}

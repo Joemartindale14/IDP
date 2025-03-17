@@ -7,13 +7,10 @@ const businesses = [
   { id: 1, name: "The Dales Feast Kitchen", location: "Selby", image: "src/assets/TheDalesFeastKichen.jpg" },
   { id: 2, name: "Yorkshire Harvest & Spice", location: "Brayton", image: "src/assets/YorkshireHarvestAndSpice.jpg" },
   { id: 3, name: "The Wensleydale Butchers", location: "Selby", image: "src/assets/WensleydaleButchers.jpg" },
-  { id: 4, name: "The Green Hills Café", location: "York", image: "src/assets/TheGreenHillsCafe.jpg" },
+  { id: 4, name: "The Green Hills Café", location: "Barlby", image: "src/assets/TheGreenHillsCafe.jpg" },
   { id: 5, name: "Coastal Crust & Cravings", location: "York", image: "src/assets/CoastalCrustAndCravings.jpg" },
   { id: 6, name: "The Yorkshire Grains & Grill", location: "Brayton", image: "src/assets/TheYorkshireGrainsAndGrill.jpg" },
   { id: 7, name: "The Old Barn Bistro", location: "Snaith", image: "src/assets/TheOldBarnBistro.jpg" },
-  { id: 8, name: "Moorside Bites Diner", location: "Barlby", image: "src/assets/MoorsideBitesDiner.jpg" },
-  { id: 9, name: "Spice & Stone Market", location: "Carlton", image: "src/assets/SpiceAndStoneMarket.jpg" },
-  { id: 10, name: "The Shepherd's Pantry", location: "Selby", image: "src/assets/ShepherdsPantry.jpg" },
 ];
 
 const BusinessPage = () => {
