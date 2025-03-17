@@ -5,6 +5,7 @@ import "./AccountPage.css";
 
 const AccountPage = ({ user, setUser }) => {
   const [userData, setUserData] = useState(null);
+  const [selectedSection, setSelectedSection] = useState("details");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,28 +29,44 @@ const AccountPage = ({ user, setUser }) => {
   };
 
   if (!userData) {
-    return <div>Loading...</div>;
+    return <div>Please wait a short moment.</div>;
   }
 
   return (
     <div className="account-page">
-      <h1>Welcome, {userData.name}</h1>
-      <p>Email: {userData.email}</p>
-      <button onClick={handleLogout}>Logout</button>
-      <h2>Your Orders</h2>
-      {userData.orders.length > 0 ? (
-        <ul>
-          {userData.orders.map((order) => (
-            <li key={order._id}>
-              <p>Order ID: {order._id}</p>
-              <p>Total: £{order.total}</p>
-              <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>You have no orders.</p>
-      )}
+      <div className="sidebar">
+        <button onClick={() => setSelectedSection("details")}>Account Details</button>
+        <button onClick={() => setSelectedSection("orders")}>Previous Orders</button>
+        <br />
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+      <div className="content">
+        {selectedSection === "details" && (
+          <div>
+            <h1>Hello, {userData.name}!</h1>
+            <p>Name: {userData.name}</p>
+            <p>Email: {userData.email}</p>
+          </div>
+        )}
+        {selectedSection === "orders" && (
+          <div>
+            <h2>Your Orders</h2>
+            {userData.orders.length > 0 ? (
+              <ul>
+                {userData.orders.map((order) => (
+                  <li key={order._id}>
+                    <p>Order ID: {order._id}</p>
+                    <p>Total: £{order.total}</p>
+                    <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>You have no orders.</p>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

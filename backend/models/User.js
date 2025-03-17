@@ -4,7 +4,7 @@ const userSchema = mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Order' }] // Add orders reference
+  orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Order' }]
 });
 
 export default mongoose.model('User', userSchema);

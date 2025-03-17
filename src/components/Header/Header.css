@@ -7,7 +7,6 @@
   position: relative;
   border-radius: 50px;
 }
-
 .header-contents {
   width: 80%;
   position: absolute;
@@ -23,18 +22,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .header-contents h2 {
   font-weight: 500;
   color: black;
   font-size: max(4.5vw, 22px);
 }
-
 .header-contents p {
   color: black;
   font-size: 1vw;
 }
-
 .header-contents button {
   border: none;
   color: white;
@@ -44,18 +40,16 @@
   font-size: max(1vw, 13px);
   border-radius: 50px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-
 .header-contents button:hover {
   background-color: #164e34da;
 }
-
 @media (max-width: 1050px) {
   .header-contents {
     max-width: 45%;
   }
 }
-
 @media (max-width: 750px) {
   .header-contents {
     max-width: 65%;

@@ -10,7 +10,7 @@ import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import ExploreMenuPage from "./pages/ExploreMenuPage/ExploreMenuPage";
 import AccountPage from "./pages/AccountPage/AccountPage";
 import BusinessPage from "./pages/BusinessPage/BusinessPage";
-import BusinessDetailPage from "./pages/BusinessDetailPage/BusinessDetailPage"; // Import BusinessDetailPage
+import BusinessDetailPage from "./pages/BusinessDetailPage/BusinessDetailPage";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);

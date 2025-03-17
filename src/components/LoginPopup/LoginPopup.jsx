@@ -4,7 +4,7 @@ import "./LoginPopup.css";
 import { assets } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
 
-const LoginPopup = ({ setShowLogin, setUser }) => { // Add setUser prop
+const LoginPopup = ({ setShowLogin, setUser }) => {
   const [currState, setCurrState] = useState("Login");
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
   const [successMessage, setSuccessMessage] = useState("");
@@ -23,7 +23,7 @@ const LoginPopup = ({ setShowLogin, setUser }) => { // Add setUser prop
       console.log(data);
       setSuccessMessage(currState === "Login" ? "Logged in successfully!" : "Registered successfully!");
       setErrorMessage("");
-      setUser(data.result); // Store user information in state
+      setUser(data.result);
       setTimeout(() => {
         setShowLogin(false);
         if (currState === "Login") {
