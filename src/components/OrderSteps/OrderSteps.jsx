@@ -12,7 +12,7 @@ const OrderSteps = () => {
             <p>Find a Local Business near you!</p>
           </div>
           <div className="order-step">
-            <img src="src/assets/diet.png" alt="product" />
+            <img src="../../assets/diet.png" alt="product" />
             <p>Purchase your products!</p>
           </div>
           <div className="order-step">
