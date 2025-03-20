@@ -9,8 +9,6 @@ const businesses = [
   { id: 3, name: "The Wensleydale Butchers", location: "Selby", image: "src/assets/WensleydaleButchers.jpg" },
   { id: 4, name: "The Green Hills Café", location: "Barlby", image: "src/assets/TheGreenHillsCafe.jpg" },
   { id: 5, name: "Coastal Crust & Cravings", location: "York", image: "src/assets/CoastalCrustAndCravings.jpg" },
-  { id: 6, name: "The Yorkshire Grains & Grill", location: "Brayton", image: "src/assets/TheYorkshireGrainsAndGrill.jpg" },
-  { id: 7, name: "The Old Barn Bistro", location: "Snaith", image: "src/assets/TheOldBarnBistro.jpg" },
 ];
 
 const BusinessPage = () => {

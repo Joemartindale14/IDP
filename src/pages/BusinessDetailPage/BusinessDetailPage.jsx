@@ -20,7 +20,18 @@ const BusinessDetailPage = () => {
         <div className="business-detail-page-left">
           <h1>{business.name}</h1>
           <p>{business.description}</p>
-          <p>{business.location}</p> 
+          <p>{business.location}</p>
+          <hr/>
+          <ul>
+            <h4>Opening Times</h4>
+            <li>Monday - 08:00 - 17:00</li>
+            <li>Tuesday - 08:00 - 17:00</li>
+            <li>Wednesday - 08:00 - 17:00</li>
+            <li>Thursday - 08:00 - 17:00</li>
+            <li>Friday - 08:00 - 17:00</li>
+            <li>Saturday - 08:00 - 17:00</li>
+            <li>Closed</li>
+          </ul> 
         </div>
         <div className="business-detail-page-right">
           <img src={business.image} alt={business.name} />
