@@ -12,7 +12,7 @@ const Header = () => {
         <p>
           Find Local Food Businessses located near you to order products and foods for collection.
         </p>
-        <button onClick={() => navigate("/businesses")}>Click here</button>
+        <button onClick={() => navigate("/businesses")}>Browse</button>
       </div>
     </div>
   );
