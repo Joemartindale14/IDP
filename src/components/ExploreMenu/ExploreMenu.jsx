@@ -18,12 +18,7 @@ const ExploreMenu = ({ category, setCategory }) => {
               key={index}
               className="explore-menu-list-item"
             >
-              <img
-                className={category === item.menu_name ? "active" : ""}
-                src={item.menu_image}
-                alt=""
-              />
-              <p>{item.menu_name}</p>
+              <p className={category === item.menu_name ? "active" : ""}>{item.menu_name}</p>
             </div>
           );
         })}
