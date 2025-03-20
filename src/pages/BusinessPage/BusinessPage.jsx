@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./BusinessPage.css";
 import LocationSearch from "../../components/LocationSearch/LocationSearch";
+import image1 from "../../assets/TheDalesFeastKichen.jpg";
+import image2 from "../../assets/YorkshireHarvestAndSpice.jpg";
+import image3 from "../../assets/WensleydaleButchers.jpg";
+import image4 from "../../assets/TheGreenHillsCafe.jpg";
+import image5 from "../../assets/CoastalCrustAndCravings.jpg";
 
 const businesses = [
-  { id: 1, name: "The Dales Feast Kitchen", location: "Selby", image: "src/assets/TheDalesFeastKichen.jpg" },
-  { id: 2, name: "Yorkshire Harvest & Spice", location: "Brayton", image: "src/assets/YorkshireHarvestAndSpice.jpg" },
-  { id: 3, name: "The Wensleydale Butchers", location: "Selby", image: "src/assets/WensleydaleButchers.jpg" },
-  { id: 4, name: "The Green Hills Café", location: "Barlby", image: "src/assets/TheGreenHillsCafe.jpg" },
-  { id: 5, name: "Coastal Crust & Cravings", location: "York", image: "src/assets/CoastalCrustAndCravings.jpg" },
+  { id: 1, name: "The Dales Feast Kitchen", location: "Selby", image: image1 },
+  { id: 2, name: "Yorkshire Harvest & Spice", location: "Brayton", image: image2 },
+  { id: 3, name: "The Wensleydale Butchers", location: "Selby", image: image3 },
+  { id: 4, name: "The Green Hills Café", location: "Barlby", image: image4 },
+  { id: 5, name: "Coastal Crust & Cravings", location: "York", image: image5 },
 ];
 
 const BusinessPage = () => {
