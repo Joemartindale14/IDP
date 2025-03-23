@@ -26,11 +26,11 @@ const App = () => {
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/explore-menu" element={<ExploreMenuPage />} />
           <Route path="/explore-menu/:businessId" element={<ExploreMenuPage />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart setShowLogin={setShowLogin} user={user} setUser={setUser} />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/account" element={<AccountPage user={user} setUser={setUser} />} />
           <Route path="/businesses" element={<BusinessPage />} />
-          <Route path="/business/:businessId" element={<BusinessDetailPage />} /> {/* Add route for BusinessDetailPage */}
+          <Route path="/business/:businessId" element={<BusinessDetailPage />} />
         </Routes>
       </div>
       <Footer />

@@ -27,7 +27,7 @@ const LoginPopup = ({ setShowLogin, setUser }) => {
       setTimeout(() => {
         setShowLogin(false);
         if (currState === "Login") {
-          navigate("/account");
+          navigate("/cart");
         }
       }, 2000);
     } catch (error) {
