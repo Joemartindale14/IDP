@@ -26,6 +26,13 @@
   display: flex;
   gap: 10px;
 }
+.place-order-left .collection-time{
+  margin: 20px 0px 20px 0px;
+}
+.collection-text{
+  color: #808080; 
+  margin-top: 20px;
+}
 .place-order-right{
   width: 100%;
   max-width: max(40%, 500px);

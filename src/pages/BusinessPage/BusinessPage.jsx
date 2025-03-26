@@ -32,9 +32,7 @@ const BusinessPage = () => {
     <div className="business-page">
       <h1>LOCAL BUSINESSES</h1>
       <p className="explore-menu-text">
-        Choose from our diverse menu to help you find what you are looking for.
-        We have a huge range of products on this menu so hopefully you can find
-        the right one for you!
+        Explore a variety of local businesses on our Search Business page! Simply browse through the list of available businesses, click on each one to view their offerings, and discover unique products you can order for collection. Whether you're looking for fresh food, handcrafted items, or specialty goods, Local Foods makes it easy to connect with your community’s best shops.
       </p>
       <hr />
       <LocationSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />

@@ -56,8 +56,9 @@ const AccountPage = ({ user, setUser }) => {
                 {userData.orders.map((order) => (
                   <li key={order._id}>
                     <p>Order ID: {order._id}</p>
-                    <p>Total: £{order.total}</p>
+                    <p>Total: £{order.totalAmount}</p>
                     <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>
+                    <p>Collection Time: {order.collectionTime}</p>
                   </li>
                 ))}
               </ul>

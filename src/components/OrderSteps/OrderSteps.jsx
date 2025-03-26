@@ -20,7 +20,7 @@ const OrderSteps = () => {
           </div>
           <div className="order-step">
             <img src={shops} alt="collection" />
-            <p>Collected from the chosen Business!</p>
+            <p>Collect from the chosen Business!</p>
           </div>
         </div>
       </div>

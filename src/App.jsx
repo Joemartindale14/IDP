@@ -11,6 +11,7 @@ import ExploreMenuPage from "./pages/ExploreMenuPage/ExploreMenuPage";
 import AccountPage from "./pages/AccountPage/AccountPage";
 import BusinessPage from "./pages/BusinessPage/BusinessPage";
 import BusinessDetailPage from "./pages/BusinessDetailPage/BusinessDetailPage";
+import OrderConfirmation from "./pages/OrderConfirmation/OrderConfirmation";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -27,10 +28,11 @@ const App = () => {
           <Route path="/explore-menu" element={<ExploreMenuPage />} />
           <Route path="/explore-menu/:businessId" element={<ExploreMenuPage />} />
           <Route path="/cart" element={<Cart setShowLogin={setShowLogin} user={user} setUser={setUser} />} />
-          <Route path="/order" element={<PlaceOrder />} />
+          <Route path="/order" element={<PlaceOrder user={user} />} />
           <Route path="/account" element={<AccountPage user={user} setUser={setUser} />} />
           <Route path="/businesses" element={<BusinessPage />} />
           <Route path="/business/:businessId" element={<BusinessDetailPage />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} />
         </Routes>
       </div>
       <Footer />
