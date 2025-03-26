@@ -5,7 +5,8 @@ import { menu_list } from "../../assets/assets";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className="explore-menu" id="explore-menu">
-      <h1>FOOD PRODUCT</h1>
+      <h1>FILTER & SORT</h1>
+      <p>(Select an option below, to filter the type of product available)</p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
           return (

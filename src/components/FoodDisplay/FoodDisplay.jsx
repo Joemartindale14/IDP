@@ -8,7 +8,7 @@ const FoodDisplay = ({ category, products }) => {
 
   return (
     <div className="food-display" id="food-display">
-      <h2>DISHES NEAR YOU</h2>
+      <h2>FOOD PRODUCTS</h2>
       <div className="food-display-list">
         {food_list.map((item, index) => {
           if ((category === "All" || category === item.category) && products.includes(item._id)) {

@@ -36,11 +36,20 @@
   background-color: #e2e2e2;
   border: none;
 }
+.explore-menu-list-item{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.explore-menu-list-item:hover{
+  background-color: #2c7c56;
+  color: whitesmoke;
+  padding: 15px;
+}
 .explore-menu-list-item .active{
   background-color: #2c7c56;
   color: whitesmoke;
-  border-radius: 30px;
-  padding: 8px;
+  padding: 15px;
 }
 @media (max-width: 1050px){
   .explore-menu-text {
