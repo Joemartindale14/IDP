@@ -1,5 +1,9 @@
+// filepath: c:\Users\Chris\Documents\IDP\backend\config\db.js
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export const connectDB = async () => {
-    await mongoose.connect("mongodb+srv://JoeMartindale:Resetmypassword1@cluster0.inhx4.mongodb.net/IDP").then(()=>console.log("Database Connected"));
+  await mongoose.connect(process.env.MONGO_URI).then(() => console.log("Database Connected"));
 };

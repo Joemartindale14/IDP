@@ -13,7 +13,10 @@ connectDB();
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://idp-one.vercel.app',
+  credentials: true, // If cookies or authentication tokens are used
+}));
 
 //routes
 app.use('/auth', authRoutes);
