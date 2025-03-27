@@ -62,7 +62,7 @@ const Cart = ({ setShowLogin, user }) => {
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>£{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
+              <b>£{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()}</b>
             </div>
           </div>
           <button onClick={handleCheckout}>

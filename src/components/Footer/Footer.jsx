@@ -1,38 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [thankYouMessage, setThankYouMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setThankYouMessage("Thank you for your message!");
+    setTimeout(() => setThankYouMessage(""), 3000);
+  };
+
   return (
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
           <img src={assets.local_foods_logo} alt="" />
           <p>
-            Local Food Businesses.
-            Explore the range of businesses in your area, provding products for you to view and buy.
+            Local Food Businesses. <br />Explore the range of businesses in your area, providing products for you to view and buy.
           </p>
-          <div className="footer-social-icons">
-            <img src={assets.facebook_icon} alt="" />
-            <img src={assets.twitter_icon} alt="" />
-            <img src={assets.linkedin_icon} alt="" />
-          </div>
         </div>
         <div className="footer-content-center">
           <h2>COMPANY</h2>
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Local Businesses</li>
+            <Link to="/">Home</Link>
+            <br />
+            <Link to="/about-us">About Us</Link>
+            <br />
+            <Link to="/businesses">Local Businesses</Link>
+            <br />
             <li>Privacy Policy</li>
           </ul>
         </div>
         <div className="footer-content-right">
           <h2>CONTACT US</h2>
-          <ul>
-            <li>Phone Number</li>
-            <li>Email Address</li>
-          </ul>
+          <form onSubmit={handleSubmit} className="cart-promocode-input">
+            <input type="text" placeholder="Message..." required />
+            <button type="submit">Submit</button>
+          </form>
+          {thankYouMessage && <p className="thank-you-message">{thankYouMessage}</p>}
         </div>
       </div>
       <hr />

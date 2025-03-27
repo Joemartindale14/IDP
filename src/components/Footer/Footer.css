@@ -29,9 +29,10 @@
 .footer-content-center h2, .footer-content-right h2{
   color: white;
 }
-.footer-social-icons img{
-  width: 40px;
-  margin-right: 15px;
+.thank-you-message {
+  color: green;
+  margin-top: 5px;
+  font-size: 20px;
 }
 .footer hr{
   width: 100%;
