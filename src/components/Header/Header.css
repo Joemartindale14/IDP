@@ -46,18 +46,37 @@
   background-color: #164e34da;
 }
 @media (max-width: 1050px) {
+  .header {
+    height: 40vw;
+  }
   .header-contents {
-    max-width: 45%;
+    width: 90%;
+  }
+  .header-contents h2 {
+    font-size: max(3.5vw, 18px);
+  }
+  .header-contents p {
+    font-size: 0.9vw;
+  }
+  .header-contents button {
+    padding: 1.5vw 3vw;
   }
 }
 @media (max-width: 750px) {
+  .header {
+    height: 50vw;
+  }
   .header-contents {
-    max-width: 65%;
+    width: 95%;
+  }
+  .header-contents h2 {
+    font-size: max(5vw, 16px);
   }
   .header-contents p {
-    display: none;
+    font-size: 0.8rem;
   }
   .header-contents button {
     padding: 2vw 4vw;
+    font-size: 0.9rem;
   }
 }
